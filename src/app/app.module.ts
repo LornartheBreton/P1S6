@@ -10,6 +10,11 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs'; 
 import { JobsPage } from '../pages/jobs/jobs';
 import { PcPage } from '../pages/pc/pc';
+import { ItemPage }  from '../pages/item/item';
+import { SearchPage } from '../pages/search/search';
+import { FavoritesPage } from '../pages/favorites/favorites';
+
+import { FavsProvider } from '../providers/favs/favs';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,10 @@ import { PcPage } from '../pages/pc/pc';
     HomePage,
     TabsPage,
     JobsPage,
-    PcPage
+    PcPage,
+    ItemPage,
+    SearchPage,
+    FavoritesPage
   ],
   imports: [
     BrowserModule,
@@ -30,12 +38,16 @@ import { PcPage } from '../pages/pc/pc';
     HomePage,
     TabsPage,
     JobsPage,
-    PcPage
+    PcPage,
+    ItemPage,
+    SearchPage,
+    FavoritesPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FavsProvider
   ]
 })
 export class AppModule {}

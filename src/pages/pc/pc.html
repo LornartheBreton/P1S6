@@ -6,10 +6,36 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>pc</ion-title>
+    <ion-title style="background-color:rgb(119,32,20)">Equipos de Cómputo</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-list>
+  
+    <ion-card *ngFor="let g of pcs">
+  
+      <img *ngIf="g.ad.hasOwnProperty('thumbnail')" src="http://img.segundamano.mx/cover/{{g.ad.thumbnail.path}}">
+  
+      <ion-card-content (click)="viewItem(g)">
+  
+        <h2 *ngIf="g.ad.hasOwnProperty('subject')">
+          {{g.ad.subject}}
+        </h2>
+  
+        <p *ngIf="g.ad.hasOwnProperty('locations')">
+          {{g.ad.locations[0].locations[0].label}}, {{g.ad.locations[0].label}}
+        </p>
+  
+        <h1 *ngIf="g.ad.hasOwnProperty('list_price')" style="color:#139490">
+          {{g.ad.list_price.label}}
+        </h1>
+  
+      </ion-card-content>
+  
+    </ion-card>
+  
+  </ion-list>
 
 </ion-content>

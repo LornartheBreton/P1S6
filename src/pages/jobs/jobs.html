@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Empleos</ion-title>
+    <ion-title style="background-color:rgb(119,32,20)">Empleos</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -18,7 +18,7 @@
   
       <img *ngIf="g.ad.hasOwnProperty('thumbnail')" src="http://img.segundamano.mx/cover/{{g.ad.thumbnail.path}}">
   
-      <ion-card-content>
+      <ion-card-content (click)="viewItem(g)">
   
         <h2 *ngIf="g.ad.hasOwnProperty('subject')">
           {{g.ad.subject}}

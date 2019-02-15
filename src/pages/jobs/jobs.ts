@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { ItemPage } from '../item/item';
 /**
  * Generated class for the JobsPage page.
  *
@@ -15,6 +16,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class JobsPage {
   jobs=[];
+  itemPage=ItemPage;
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public http: HttpClient) {
     this.http.get('/v1/klfst?&category=6020&lim=29&lang=es')
@@ -32,6 +34,10 @@ export class JobsPage {
         error => {
           console.log(JSON.stringify(error));
         });
+  }
+
+  viewItem(c: any){
+    this.navCtrl.push(this.itemPage, {item: c})
   }
 
   ionViewDidLoad() {

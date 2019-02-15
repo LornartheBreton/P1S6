@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { ItemPage } from '../item/item';
 
 @Component({
   selector: 'page-home',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class HomePage {
 
   games=[];
-
+  itemPage=ItemPage;
   constructor(public navCtrl: NavController,
     public http: HttpClient) {
 
@@ -29,6 +30,10 @@ export class HomePage {
           console.log(JSON.stringify(error));
         });
 
+  }
+
+  viewItem(c: any) {
+    this.navCtrl.push(this.itemPage, { item: c })
   }
 
 }
