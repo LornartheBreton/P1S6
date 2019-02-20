@@ -10,9 +10,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding >
+<ion-content padding padding style="background-color:rgb(156, 82, 73)">
 
-  <ion-card >
+  <ion-card style="background-color:rgb(184, 145, 139)">
   
     <ion-slides pager>
   
@@ -23,8 +23,8 @@
     </ion-slides>
   </ion-card>
   
-  <ion-card >
-    <ion-item >
+  <ion-card style="background-color:rgb(184, 145, 139)">
+    <ion-item style="background-color:rgb(184, 145, 139)">
   
       {{item.ad.subject}}
   
@@ -34,8 +34,8 @@
    
     </ion-item>
   
-    <ion-item >
-      <h1 *ngIf="item.ad.hasOwnProperty('list_price')" style="color:#139490">
+    <ion-item style="background-color:rgb(184, 145, 139)">
+      <h1 *ngIf="item.ad.hasOwnProperty('list_price')" style="background-color:rgb(184, 145, 139)">
         {{item.ad.list_price.label}}
       </h1>
       <ion-icon name="share" item-end></ion-icon>
@@ -70,13 +70,13 @@
     </ion-card-content>
   </ion-card>
   
-  <ion-card >
+  <ion-card style="background-color:rgb(184, 145, 139)">
   
-    <ion-item style="color:rgb(175, 67, 25)">
+    <ion-item style="background-color:rgb(184, 145, 139)">
       <ion-avatar item-start>
         <img src="../../assets//imgs/logo.png">
       </ion-avatar>
-      <h2 *ngIf="item.ad.hasOwnProperty('user')">
+      <h2 *ngIf="item.ad.hasOwnProperty('user')" style="color:rgb(175, 67, 25) ">
         {{item.ad.user.account.name}}
       </h2>
   
@@ -88,7 +88,7 @@
   
   </ion-card>
   
-  <ion-card>
+  <ion-card style="background-color:rgb(184, 145, 139)">
   
     <ion-card-header style="color:#139490" *ngIf="item.ad.hasOwnProperty('ad_details')">
       Características
@@ -121,7 +121,7 @@
   
   </ion-card>
   
-  <ion-card>
+  <ion-card style="background-color:rgb(184, 145, 139)">
     <h2 *ngIf="item.ad.hasOwnProperty('body')" style="color:#139490">
       Descripcion
     </h2>

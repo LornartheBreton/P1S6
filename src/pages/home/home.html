@@ -6,11 +6,11 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding > 
+<ion-content padding style="background-color:rgb(156, 82, 73)"> 
 
   <ion-list > 
     
-    <ion-card *ngFor="let g of games">
+    <ion-card *ngFor="let g of games" style="background-color:rgb(184, 145, 139)">
           
       <img *ngIf="g.ad.hasOwnProperty('thumbnail')"
       src="http://img.segundamano.mx/cover/{{g.ad.thumbnail.path}}"

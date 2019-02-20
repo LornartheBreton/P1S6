@@ -16,10 +16,10 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding  style="background-color:rgb(156, 82, 73)">
 
   <ion-list>
-    <ion-item *ngFor="let c of items">
+    <ion-item *ngFor="let c of items" style="background-color:rgb(184, 145, 139)">
       <ion-thumbnail item-start>
         <img *ngIf="c.ad.hasOwnProperty('thumbnail')" src="http://img.segundamano.mx/cover/{{c.ad.thumbnail.path}}">
       </ion-thumbnail>
