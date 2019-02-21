@@ -18,6 +18,7 @@
       <ion-item *ngFor="let c of favs"  style="background-color:rgb(184, 145, 139)">
         <ion-thumbnail item-start>
           <img *ngIf="c.ad.hasOwnProperty('thumbnail')" src="http://img.segundamano.mx/cover/{{c.ad.thumbnail.path}}">
+          <img *ngIf="!(c.ad.hasOwnProperty('thumbnail'))" src="../../assets/imgs/logo.png">
         </ion-thumbnail>
         <h2>{{c.ad.subject}}</h2>
         <h1 *ngIf="c.ad.hasOwnProperty('list_price')" style="color:#139490">

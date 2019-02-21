@@ -16,6 +16,8 @@
       src="http://img.segundamano.mx/cover/{{g.ad.thumbnail.path}}"
       >
 
+      <img *ngIf="!(g.ad.hasOwnProperty('thumbnail'))" src="../../assets/imgs/logo.png">
+
       <ion-card-content (click)="viewItem(g)">
 
         <h2 *ngIf="g.ad.hasOwnProperty('subject')">
